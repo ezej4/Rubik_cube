@@ -1,0 +1,136 @@
+.cubic__mini,
+.cubic__face {
+  width: 75px;
+  height: 75px;
+}
+
+.cubic__mini {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  touch-action: none;
+  transform-style: preserve-3d;
+  opacity: 0;
+}
+
+.cubic--auto-roting {
+  transition: transform 1s;
+}
+
+.cubic__face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 2px;
+  background: black;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.cubic__face--colored {
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.cubic__face--uncolored {
+  border: 3px solid rgb(36, 36, 36);
+}
+
+.cubic__face--white {
+  background: white;
+}
+
+.cubic__face--red {
+  background: red;
+}
+
+.cubic__face--yellow {
+  background: yellow;
+}
+
+.cubic__face--green {
+  background: green;
+}
+
+.cubic__face--orange {
+  background: orange;
+}
+
+.cubic__face--blue {
+  background: blue;
+}
+
+.cubic__face--front {
+  transform: rotateX(0deg) rotateZ(0deg) translateZ(38px);
+}
+
+.cubic__face--back {
+  transform: rotatey(180deg) rotateZ(-90deg) translateZ(38px);
+}
+
+.cubic__face--left {
+  transform: rotatey(-90deg) rotateZ(-90deg) translateZ(38px);
+}
+
+.cubic__face--right {
+  transform: rotateY(90deg) rotateZ(0deg) translateZ(38px);
+}
+
+.cubic__face--bottom {
+  transform: rotateX(-90deg) rotateZ(-90deg) translateZ(38px);
+}
+
+.cubic__face--top {
+  transform: rotateX(90deg) rotateZ(0deg) translateZ(38px);
+}
+
+@media (min-width: 780px) {
+  .cubic__face--colored:hover,
+  .cubic__face--colored:hover,
+  .cubic__face--colored:hover,
+  .cubic__face--colored:hover,
+  .cubic__face--colored:hover,
+  .cubic__face--colored:hover {
+    filter: contrast(0.5);
+  }
+
+  .cubic__face--colored {
+    border: 4px solid rgb(0, 0, 0);
+  }
+
+  .cubic__face--uncolored {
+    border: 4px solid rgb(36, 36, 36);
+  }
+
+  .cubic__mini,
+  .cubic__face {
+    width: 95px;
+    height: 95px;
+  }
+
+  .cubic__face--front {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(48px);
+  }
+
+  .cubic__face--back {
+    transform: rotatey(180deg) rotateZ(-90deg) translateZ(48px);
+  }
+
+  .cubic__face--left {
+    transform: rotatey(-90deg) rotateZ(-90deg) translateZ(48px);
+  }
+
+  .cubic__face--right {
+    transform: rotateY(90deg) rotateZ(0deg) translateZ(48px);
+  }
+
+  .cubic__face--bottom {
+    transform: rotateX(-90deg) rotateZ(-90deg) translateZ(48px);
+  }
+
+  .cubic__face--top {
+    transform: rotateX(90deg) rotateZ(0deg) translateZ(48px);
+  }
+}

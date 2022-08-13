@@ -1,0 +1,50 @@
+.section-movements {
+  position: fixed;
+  right: 0;
+  top: 10px;
+  padding: 20px;
+  background: #861388;
+  z-index: 3;
+  border-radius: 5px;
+  width: 300px;
+  min-height: 600px;
+  clip-path: circle(38px at 300px 37px);
+  transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+  
+}
+
+.section-movements__open-menu {
+  display: block;
+  text-align: right;
+}
+
+.section-movements__open-menu i {
+  font-size: 32px;
+  transition: .5s color;
+}
+
+.section-movements__open-menu i:hover {
+  color: white;
+}
+
+.section-movements__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-movements__button-move {
+  padding: 6px 10px;
+  color: white;
+  border: none;
+  background: #1F1A38;
+  border-radius: 5px;
+}
+
+.section-movements__button-move:hover {
+  cursor: pointer;
+}
+
+.section-movements__cube-image {
+  width: 50px;
+}

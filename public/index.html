@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Funny Rubik's Cubic Game</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Small demo of the cube Rubik" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Ezequiel Fabbroni" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favIcons/favicon-32x32.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favIcons/favicon-16x16.ico" />
+    <base href="./" />
+
+    <link rel="StyleSheet" href="./styles/styles-v2.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/header.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/cubic.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/section-cubic.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/action-bar.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/section-movements.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/flows-buttons.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/timer.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/about.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/footer.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./styles/keyboard-modal.css" type="text/css" media="screen" />
+    <!--   <link rel=StyleSheet href="./assets/fonts/Roboto-Regular.ttf">
+    <link rel=StyleSheet href="./assets/fonts/Nunito-Regular.ttf"> -->
+
+    <script src="https://kit.fontawesome.com/20496c3b97.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- LOGO Rubik Cube -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="header__icon" version="1.1" id="svg1532" width="75" height="50.001">
+        <style id="style1466"></style>
+        <g id="layer1" transform="translate(-79.509 -50.65)" display="inline">
+          <path
+            d="M80.502 84.35l.26 4.726.245 3.037s.015.746.973.917l6.52 1.662s1.428.525 1.428-.733c0-1.257-.165-7.581-.165-7.581s-.052-.577-.603-1.025c-.55-.449-6.827-1.832-6.827-1.832l-.86-.233s-.824-.12-.97 1.063z"
+            id="path2108"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M80.211 72.672l.186 5.462.181 3.1s-.037.328 1.037.854l6.52 1.662s1.429.525 1.429-.733c0-1.308-.05-6.04-.05-6.04s.102-1.507-.038-2.196c-.257-1.275-2.164-1.483-2.164-1.483l-5.124-1.06s-1.904-.749-1.977.434z"
+            id="path2108-4"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M79.569 61.264l.258 4.726.104 3.81s-.063.557 1.011 1.083l7.815 1.56s.69-.055.625-1.57a502.157 502.157 0 01-.187-7.653s-.208-1.084-1.124-1.297a694.71 694.71 0 00-6.672-1.489l-.86-.233s-.824-.12-.97 1.063z"
+            id="path2108-4-4"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M90.347 63.49l.051 4.675.052 3.812s-.037.683 1.037 1.209l8.1 1.662s.873.07.81-1.447c-.057-1.342-.156-7.236-.165-8.234 0 0-.208-1.084-1.124-1.297-2.31-.537-6.995-1.308-6.995-1.308l-.796-.135s-.824-.12-.97 1.063z"
+            id="path2108-4-4-1"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M90.566 75.013l.025 4.624.233 3.735s-.037.734 1.037 1.26c2.641.661 5.186 1.324 7.664 1.778 0 0 .839.003.922-1.512-.021-3.71.04-6.505.032-7.199-.012-1.066-1.227-1.846-2.456-2.037-2.622-.513-2.198-.437-5.744-1.255.004.026-1.549-.45-1.714.606z"
+            id="path2108-4-4-1-0"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M90.854 86.485l.026 4.519.147 3.506s-.064.744 1.097 1.168c3.108.929 5.624 1.666 7.647 1.98.173-.038.835.026.792-1.378-.021-3.625-.02-6.161-.026-6.84-.01-.982-.21-1.86-1.868-2.1-2.348-.54-2.135-.437-6.123-1.447.004.026-1.53-.439-1.692.592z"
+            id="path2108-4-4-1-0-5"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".117"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M101.534 65.72l.013 4.65-.013 3.786s-.177 1.006 1.076 1.324c2.737.833 4.164.891 8.457 1.744-.026-.052.77.217.719-.99-.013-.298.16-7.737.034-8.786 0 0-.053-1.084-.968-1.297-2.311-.537-7.487-1.32-7.487-1.32l-.796-.135s-.889-.158-1.035 1.025z"
+            id="path2108-4-4-1-05"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M101.545 77.699l-.032 4.596c-.036.603-.008 1.522.004 2.07-.061 1.851.514 2.877 1.807 3.174 1.847.425 2.956.652 5.834 1.35 1.137.305 2.629.437 2.547-.676-.012-.299.143-7.756.017-8.804 0 0-.364-.851-1.28-1.064-2.31-.537-7.066-1.536-7.066-1.536l-.796-.135s-.888-.158-1.035 1.025z"
+            id="path2108-4-4-1-05-9"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M101.527 89.592l.05 4.578.106 3.457c.01.013-.018.666 1.426.941 2.769.76 3.15.8 7.585 2.024.421 0 .835-.195.883-.558.04-.296.197-7.666.072-8.714 0 0-.4-1.012-1.48-1.207-2.337-.421-7.012-1.483-7.012-1.483l-.796-.134s-.687-.086-.834 1.096z"
+            id="path2108-4-4-1-05-1"
+            class="face-front"
+            display="inline"
+            opacity="1"
+            fill="green"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M91.389 61.53l8.327 1.582c.905.14 1.039.028 1.318-.036l4.978-2.695c.084-.281-.187-.445-.275-.458l-8.254-1.447c-.7-.11-.836-.076-.901-.054l-.354.151c-1.622.8-2.399 1.231-4.848 2.437-.129.158-.436.295.009.52z"
+            id="path926"
+            class="face-top"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M102.82 63.638l8.327 1.581c.905.14 1.233.105 1.512.04l4.784-2.77c.084-.282-.187-.446-.274-.459l-7.436-1.532c-.011.021-1.08-.128-1.266-.139-.549-.033-.924-.04-1.228.145-1.424.797.138-.035-4.478 2.392-.229.132-.684.466-.239.691z"
+            id="path926-5"
+            class="face-top"
+            display="inline"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M80.654 59.515l8.328 1.58c.905.141.818-.072 1.097-.137l5.199-2.593c.084-.28-.187-.445-.275-.458l-7.827-1.269c-.7-.11-.875-.089-1.121-.067l-.406.164c-1.622.8-2.554 1.053-5.004 2.259-.128.158-.435.295.01.52z"
+            id="path926-3"
+            class="face-top"
+            display="inline"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M87.717 56.341l8.353 1.352c.62.192.74-.112 1.085-.188l4.202-2.123c.291-.294.02-.509-.068-.522l-7.231-1.294c-.701-.11-1.031-.102-1.277-.08l-.276.113c-1.623.8-2.347 1.016-4.797 2.221-.128.158-.436.295.009.521z"
+            id="path926-3-4"
+            class="face-top"
+            display="inline"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M98.078 58.11l8.353 1.352c.911.21 1.228.037 1.446-.11 1.379-.708 2.846-1.387 3.96-2.165.512-.276-.052-.541-.187-.558l-7.232-1.294c-.7-.11-1.15-.192-1.395-.17l-.331.14c-1.623.8-2.174 1.079-4.623 2.284-.128.158-.436.295.009.52z"
+            id="path926-3-4-5"
+            class="face-top"
+            display="inline"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M109.306 60.075l7.87 1.438c.967.203 1.596.121 1.835-.009l3.799-2.315c.463-.256.541-.57.03-.765l-8.548-1.378a2.053 2.053 0 00-1.35.24l-3.91 2.295c-.177.125-.42.336.274.494z"
+            id="path1008"
+            class="face-top"
+            opacity="1"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M128.19 56.022l-3.45 2.03c-.362.104-.54.29-1.666.054l-7.641-1.247c-.489-.009-.779-.315-.452-.577l3.682-2.11c.385-.243.829-.24 1.281-.198l7.706 1.177c.549.1 1.274.328.54.871z"
+            id="path1010"
+            class="face-top"
+            display="inline"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M104.387 54.961l7.5 1.227c1.12.158 1.695.054 1.88-.023l3.789-2.11c.127-.208.006-.346-.207-.458L109.79 52.3c-.364-.012-.586-.21-1.217.127l-4.007 1.952c-.383.194-.48.388-.18.581z"
+            id="path1052"
+            class="face-top"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M94.409 53.248l6.735 1.168c1.69.337 1.626.1 1.793.054l4.466-2.075c.076-.252-.011-.362-.1-.431l-6.8-1.123c-.616-.086-1.237-.225-1.83-.036l-4.21 1.869c-.191.118-.375.4-.054.574z"
+            id="path1054"
+            class="face-top"
+            fill="#fff"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M112.93 67.603l-.073 8.696c.183 1.03.496.532.769.503l4.319-3.055c.483-.805.312-1.111.402-1.617l.211-8.162c-.142-.706-.408-.799-.579-.749-1.44.82-2.96 1.833-4.463 2.731-.38.43-.495 1.034-.586 1.653z"
+            id="path1056"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M112.766 79.697c-.21 2.814-.052 5.651-.07 8.495.066 1.088.38.737.597.649l4.284-3.44c.347-.27.47-.462.54-1.472l.137-7.821c.012-.785-.259-.898-.556-.839l-4.465 3.15c-.239.38-.47.764-.467 1.278z"
+            id="path1058"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M112.625 91.848l-.116 7.914c.154.871.596.517.596.517l4.27-3.782c.244-.293.351-.653.4-1.041l.169-8.194c-.064-.212.149-.625-.44-.622l-4.374 3.518c-.637.44-.458 1.095-.505 1.69z"
+            id="path1060"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M118.567 86.818l-.165 7.95c.035.591.26.509.412.52 2.19-1.772 2.608-2.185 3.944-3.305.3-.253.539-.554.522-.997l.21-8.058c.058-.56-.458-.608-.622-.476l-3.642 2.883c-.533.459-.573.978-.659 1.483z"
+            id="path1062"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M118.876 75.32l-.26 8.207c-.052.938.441.754.687.711l3.74-3.023c.33-.281.516-.774.57-1.461l.155-8.194c.021-.228-.104-.331-.324-.356l-3.844 2.693c-.536.363-.624.895-.724 1.423z"
+            id="path1064"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M119.122 63.595l-.22 8.562c.01.735.338.68.582.66l3.895-2.756c.187-.088.507-.787.596-1.36l.284-8.359c-.058-.286.03-.675-.543-.635l-4 2.452c-.361.318-.542.813-.594 1.436z"
+            id="path1066"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M124.7 60.253l-.237 8.192c.036.562.218.538.43.53 1.731-1.037 2.57-1.644 3.715-2.569.159-.223.382-.118.54-1.374l.29-7.813c.07-.83-.214-.729-.42-.79l-3.807 2.37c-.273.216-.433.664-.51 1.454z"
+            id="path1068"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M124.363 71.433l-.259 8.054c.011.673.267.585.485.54l3.708-2.878c.34-.48.292-1.024.362-1.55l.26-7.342c.001-.789-.258-.738-.596-.432l-3.624 2.49c-.218.33-.361.691-.336 1.118z"
+            id="path1070"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+          <path
+            d="M124 82.409l-.232 7.825c.121.525.363.492.62.381l3.469-3.1c.274-.267.408-.613.44-1.016l.233-7.647c-.055-.526-.248-.625-.544-.407l-3.636 2.871c-.31.07-.363.91-.35 1.093z"
+            id="path1072"
+            class="face-right"
+            fill="red"
+            fill-opacity="1"
+            stroke="#000"
+            stroke-width=".119"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-opacity="1"
+          />
+        </g>
+      </svg>
+      <h1 class="header__title">The Rubik's Cube</h1>
+    </header>
+
+    <section class="section-cubic">
+      <div class="section-cubic__selected-area" id="cubic-selected-area">
+        <div class="section-cubic__main">
+          <div class="section-cubic__cubic" id="cubic">
+            <div class="section-cubic__cubic-plain" id="cubic-plain"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="action-bar">
+      <div class="action-bar__rotating-buttons">
+        <i class="fa fa-chevron-down action-bar__icon-down" onclick="scrollDown()"></i>
+        <i class="fas fa-arrow-circle-left" onclick="rotate('left')"></i>
+        <i class="fas fa-arrow-circle-up" onclick="rotate('top')"></i>
+        <i class="fas fa-arrow-circle-right" onclick="rotate('right')"></i>
+      </div>
+    </section>
+
+    <div class="flows-buttons">
+      <ul class="flows-buttons__list">
+        <li id="keyboard-modal-trigger" class="flows-buttons__item flows-buttons__item--keyboard">
+          <span class="flows-buttons__button" aria-label="keyboard">
+            <i class="fas fa-keyboard"></i>
+          </span>
+        </li>
+
+        <li class="flows-buttons__item">
+          <span class="flows-buttons__button flows-buttons__button--text" aria-label="Mix the cube" id="mix-button">
+            <span class="flows-buttons__mix">Mix</span>
+          </span>
+        </li>
+
+        <li class="flows-buttons__item">
+          <span class="flows-buttons__button" aria-label="Restore" id="restore_button">
+            <i class="fa fa-rotate-left"></i>
+          </span>
+        </li>
+
+        <li class="flows-buttons__item">
+          <span class="flows-buttons__button" aria-label="Show Timer" id="timer_trigger">
+            <i class="fas fa-stopwatch-20"></i>
+          </span>
+        </li>
+
+        <li class="flows-buttons__item">
+          <span class="flows-buttons__button" aria-label="Cool Animation" id="animate_button">
+            <i class="fas fa-cube"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timer" id="timer">
+      <div class="timer__logo" id="timer_logo">
+        <?xml version="1.0" encoding="iso-8859-1" ?>
+        <svg
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <g>
+                <path
+                  d="M276.193,58.507V40.389h14.578c11.153,0,20.194-9.042,20.194-20.194S301.923,0,290.771,0h-69.544
+				c-11.153,0-20.194,9.042-20.194,20.194s9.042,20.194,20.194,20.194h14.578v18.118C119.952,68.76,28.799,166.327,28.799,284.799
+				C28.799,410.078,130.721,512,256,512s227.201-101.922,227.201-227.201C483.2,166.327,392.046,68.76,276.193,58.507z
+				 M276.193,470.516v-20.124c0-11.153-9.042-20.194-20.194-20.194c-11.153,0-20.194,9.042-20.194,20.194v20.124
+				c-86.91-9.385-156.137-78.614-165.522-165.522h20.124c11.153,0,20.194-9.042,20.194-20.194s-9.042-20.194-20.194-20.194H70.282
+				c9.385-86.91,78.614-156.137,165.522-165.523v20.124c0,11.153,9.042,20.194,20.194,20.194c11.153,0,20.194-9.042,20.194-20.194
+				V99.081c86.91,9.385,156.137,78.614,165.522,165.523h-20.124c-11.153,0-20.194,9.042-20.194,20.194s9.042,20.194,20.194,20.194
+				h20.126C432.331,391.903,363.103,461.132,276.193,470.516z"
+                />
+                <path
+                  id="timer_arrow"
+                  d="M317.248,194.99l-58.179,58.18c-1.011-0.097-2.034-0.151-3.071-0.151c-17.552,0-31.779,14.229-31.779,31.779
+				c0,17.552,14.228,31.779,31.779,31.779s31.779-14.229,31.779-31.779c0-1.037-0.054-2.06-0.151-3.07l58.178-58.18
+				c7.887-7.885,7.887-20.672,0-28.559C337.922,187.103,325.135,187.103,317.248,194.99z"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="timer__fields">
+        <div class="timer__moves">
+          <p class="timer__title">Moves</p>
+          <p class="timer__value" id="timer_moves">0</p>
+        </div>
+        <div class="timer__time">
+          <p class="timer__title">Time</p>
+          <p class="timer__value" id="timer_time">00:00</p>
+        </div>
+      </div>
+
+      <div class="timer__buttons">
+        <i class="fas fa-play" id="play_timer"></i>
+        <i class="fas fa-pause" id="pause_timer"></i>
+        <i class="fas fa-stop" id="stop_timer"></i>
+      </div>
+    </div>
+
+    <article id="about" class="about">
+      <div class="about__content">
+        <div class="about__title">About this</div>
+        <div class="about__texts">
+          <p class="about__text">
+            Made with ❤️ and only for fun.<br />
+            Play with the cube and try to resolve it.
+          </p>
+          <p class="about__text">
+            Build with only Vanilla Javascript, <a target="_blank" href="https://fontawesome.com/">FA ICONS</a> and
+            <a target="_blank" href="https://greensock.com/gsap/">GSAP </a> for some animations.
+          </p>
+          <p class="about__text">
+            <mark class="about__text-trillons">43 trillion</mark>. <br />Or more accurately, 43,252,003,274,489,856,000. <br />
+            This is the number of possible configurations that can occur in the Rubik's cube.
+          </p>
+          <p class="about__text">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Ern%C5%91_Rubik">Erno Rubik</a> made the
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Rubik%27s_Cube">Rubik's Cube</a> on May 19, 1974. <br />
+            The cube is made of 27 pieces or small cubes, and it has 6 faces (each of a different color).
+          </p>
+        </div>
+      </div>
+      <div class="about__rubik-logo-container">
+        <div class="about__rubik-logo-container">
+          <svg
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:cc="http://web.resource.org/cc/"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            id="svg1441"
+            style="enable-background: new 93 57.331 421.484 487.379"
+            xml:space="preserve"
+            viewBox="93 57.331 421.484 487.379"
+            sodipodi:version="0.32"
+            version="1.1"
+            y="0px"
+            x="0px"
+            sodipodi:docname="rubiks_cube_simple_ptl.svg"
+            sodipodi:docbase="/home/petri/Desktop/Omat Open ClipArt kuvat"
+          >
+            <sodipodi:namedview
+              id="base"
+              bordercolor="#666666"
+              pagecolor="#ffffff"
+              showgrid="true"
+              borderopacity="1.0"
+              showborder="false"
+              showguides="false"
+            >
+            </sodipodi:namedview>
+            <g id="layer1">
+              <g id="g11216" transform="matrix(1.0459 0 0 1.0103 -25.117 -5.8226)">
+                <path
+                  id="rect5005"
+                  fill="#F41809"
+                  d="m326.77 482.55l43.838-32.73c4.328-3.232 7.837-2.635 7.837 1.332v45.928c0 3.967-3.509 9.803-7.837 13.036l-43.838 32.73c-4.329 3.23-7.838 2.635-7.838-1.334v-45.928c0.01-3.97 3.51-9.81 7.84-13.04z"
+                />
+                <path
+                  id="rect5765"
+                  fill="#F41809"
+                  d="m329.11 407.64l42.143-31.463c4.797-3.582 8.685-2.589 8.685 2.219v42.887c0 4.808-3.888 11.607-8.685 15.189l-42.143 31.464c-4.797 3.58-8.685 2.587-8.685-2.221v-42.887c-0.02-4.8 3.87-11.61 8.67-15.19z"
+                />
+                <path
+                  id="rect5767"
+                  fill="#F41809"
+                  d="m325.51 336.15l49.343-36.84c2.809-2.098 5.084 2.043 5.084 9.249v34.205c0 7.205-2.275 14.745-5.084 16.84l-49.343 36.842c-2.809 2.096-5.084-2.045-5.084-9.249v-34.2c-0.01-7.21 2.27-14.75 5.08-16.84z"
+                />
+                <path
+                  id="rect5769"
+                  fill="#F41809"
+                  d="m396.33 282.84l44.234-32.759c4.354-3.223 7.883-0.785 7.883 5.446v37.731c0 6.231-3.529 13.896-7.883 17.119l-44.234 32.759c-4.354 3.223-7.883 0.785-7.883-5.446v-37.731c0-6.24 3.53-13.9 7.88-17.12z"
+                />
+                <path
+                  id="rect5771"
+                  fill="#F41809"
+                  d="m394.64 357.82l47.624-35.268c3.417-2.531 6.188 1.45 6.188 8.893v33.345c0 7.443-2.77 15.528-6.188 18.058l-47.624 35.268c-3.417 2.531-6.188-1.452-6.188-8.895v-33.345c0-7.45 2.77-15.53 6.19-18.06z"
+                />
+                <path
+                  id="rect5773"
+                  fill="#F41809"
+                  d="m395.69 429.94l42.541-31.504c4.821-3.571 8.729 0.06 8.729 8.108v31.152c0 8.048-3.909 17.465-8.729 21.036l-42.541 31.504c-4.822 3.569-8.73-0.06-8.73-8.108v-31.152c0-8.06 3.91-17.47 8.73-21.04z"
+                />
+                <path
+                  id="rect5775"
+                  fill="#F41809"
+                  d="m462.84 377.56l44.234-32.757c4.354-3.225 7.883-0.771 7.883 5.477v37.665c0 6.25-3.529 13.929-7.883 17.154l-44.234 32.757c-4.354 3.225-7.883 0.771-7.883-5.479v-37.663c0-6.24 3.53-13.92 7.88-17.15z"
+                />
+                <path
+                  id="rect5777"
+                  fill="#F41809"
+                  d="m462.97 308.65l45.93-34.013c3.885-2.877 7.035-0.043 7.035 6.331v37.213c0 6.374-3.149 13.875-7.035 16.752l-45.93 34.013c-3.885 2.877-7.035 0.041-7.035-6.333v-37.213c-0.01-6.38 3.14-13.88 7.03-16.75z"
+                />
+                <path
+                  id="rect5779"
+                  fill="#F41809"
+                  d="m462.97 234.19l45.93-34.011c3.885-2.877 7.035-1.904 7.035 2.173v45.53c0 4.077-3.149 9.715-7.035 12.593l-45.93 34.011c-3.885 2.879-7.035 1.904-7.035-2.171v-45.532c-0.01-4.07 3.14-9.71 7.03-12.59z"
+                />
+                <path
+                  id="rect8055"
+                  fill="#00d"
+                  d="m255.98 451.21l44.436 30.897c4.163 2.894 7.538 10.967 7.538 18.031v34.713c0 7.064-3.374 10.445-7.538 7.551l-44.436-30.897c-4.163-2.896-7.538-10.969-7.538-18.033v-34.71c0.01-7.06 3.38-10.45 7.54-7.55z"
+                />
+                <path
+                  id="rect8815"
+                  fill="#00d"
+                  d="m256.98 376.54l44.436 30.897c4.164 2.894 7.538 8.239 7.538 11.94v46.898c0 3.7-3.374 4.352-7.538 1.458l-44.436-30.897c-4.163-2.894-7.538-8.239-7.538-11.94v-46.898c0.01-3.71 3.38-4.36 7.54-1.46z"
+                />
+                <path
+                  id="rect8817"
+                  fill="#00d"
+                  d="m256.98 305.21l44.436 30.897c4.164 2.894 7.538 9.138 7.538 13.944v42.887c0 4.808-3.374 6.358-7.538 3.464l-44.436-30.897c-4.163-2.894-7.538-9.138-7.538-13.946v-42.887c0.01-4.79 3.38-6.34 7.54-3.45z"
+                />
+                <path
+                  id="rect8819"
+                  fill="#00d"
+                  d="m188.98 404.53l44.436 30.897c4.163 2.896 7.538 10.188 7.538 16.291v38.195c0 6.103-3.375 8.703-7.538 5.809l-44.436-30.897c-4.163-2.894-7.538-10.188-7.538-16.291v-38.195c0.01-6.1 3.38-8.7 7.54-5.81z"
+                />
+                <path
+                  id="rect8821"
+                  fill="#00d"
+                  d="m188.98 331.54l44.436 30.897c4.163 2.894 7.538 10.544 7.538 17.086v36.604c0 6.542-3.375 9.5-7.538 6.606l-44.436-30.897c-4.163-2.894-7.538-10.546-7.538-17.088v-36.604c0.01-6.55 3.38-9.51 7.54-6.61z"
+                />
+                <path
+                  id="rect8823"
+                  fill="#00d"
+                  d="m189.47 261.21l44.437 30.897c4.163 2.894 7.538 9.494 7.538 14.741v41.296c0 5.247-3.375 7.153-7.538 4.259l-44.437-30.897c-4.163-2.894-7.538-9.494-7.538-14.741v-41.296c0.01-5.25 3.38-7.15 7.54-4.26z"
+                />
+                <path
+                  id="rect8825"
+                  fill="#00d"
+                  d="m120.47 357.21l44.436 30.897c4.163 2.894 7.538 8.866 7.538 13.339v44.097c0 4.474-3.375 5.753-7.538 2.859l-44.436-30.897c-4.163-2.896-7.538-8.868-7.538-13.341v-44.097c0.01-4.48 3.38-5.76 7.54-2.86z"
+                />
+                <path
+                  id="rect8827"
+                  fill="#00d"
+                  d="m121.47 287.21l44.436 30.897c4.163 2.894 7.538 8.715 7.538 13.001v44.776c0 4.286-3.375 5.413-7.538 2.519l-44.436-30.897c-4.163-2.894-7.538-8.715-7.538-13.001v-44.778c0.01-4.29 3.38-5.41 7.54-2.52z"
+                />
+                <path
+                  id="rect8829"
+                  fill="#00d"
+                  d="m121.47 215.21l44.436 30.897c4.163 2.894 7.538 8.317 7.538 12.11v46.556c0 3.795-3.375 4.524-7.538 1.63l-44.436-30.897c-4.163-2.894-7.538-8.317-7.538-12.112v-46.556c0.01-3.8 3.38-4.52 7.54-1.63z"
+                />
+                <g id="g11205" fill="#FFE200" transform="matrix(.96731 .65485 -.93303 .67891 326.71 -16.808)">
+                  <path
+                    id="rect10429"
+                    d="m52.12 210.56l50.484-0.704c2.493-0.035 4.513 4.067 4.513 9.164v41.84c0 5.097-2.021 9.256-4.514 9.291l-50.484 0.705c-2.493 0.035-4.513-4.067-4.513-9.164v-41.84c0.003-5.1 2.024-9.26 4.517-9.3z"
+                  />
+                  <path
+                    id="rect11189"
+                    d="m122.12 210.99l50.483-0.706c2.494-0.034 4.514 4.069 4.515 9.165v41.839c0 5.097-2.021 9.256-4.514 9.291l-50.484 0.705c-2.493 0.035-4.513-4.067-4.513-9.164v-41.84c-0.01-5.09 2.01-9.25 4.5-9.29z"
+                  />
+                  <path
+                    id="rect11191"
+                    d="m192.61 209.99l50.484-0.705c2.493-0.035 4.514 4.069 4.514 9.164l0.001 41.841c-0.001 5.096-2.021 9.256-4.515 9.29l-50.483 0.707c-2.494 0.034-4.514-4.069-4.515-9.166v-41.839c0.01-5.08 2.04-9.24 4.53-9.28z"
+                  />
+                  <path
+                    id="rect11193"
+                    d="m52.608 137.99l50.484-0.705c2.493-0.034 4.514 4.069 4.514 9.165l0.001 41.841c-0.001 5.095-2.022 9.255-4.515 9.29l-50.483 0.706c-2.493 0.034-4.514-4.069-4.514-9.165v-41.84c0.011-5.09 2.032-9.25 4.525-9.29z"
+                  />
+                  <path
+                    id="rect11195"
+                    d="m122.12 136.99l50.483-0.706c2.494-0.034 4.514 4.069 4.515 9.166v41.839c0 5.097-2.021 9.256-4.514 9.292l-50.484 0.705c-2.493 0.035-4.514-4.069-4.513-9.164l-0.001-41.841c-0.01-5.09 2.01-9.25 4.5-9.29z"
+                  />
+                  <path
+                    id="rect11197"
+                    d="m194.12 135.99l50.484-0.705c2.493-0.035 4.514 4.069 4.513 9.164l0.001 41.841c-0.001 5.096-2.021 9.256-4.515 9.29l-50.483 0.706c-2.494 0.033-4.514-4.069-4.514-9.166v-41.839c0-5.08 2.02-9.24 4.51-9.28z"
+                  />
+                  <path
+                    id="rect11199"
+                    d="m52.608 67.041l50.484-0.705c2.493-0.035 4.514 4.068 4.514 9.165v41.84c0 5.096-2.021 9.256-4.514 9.291l-50.484 0.705c-2.493 0.035-4.514-4.068-4.514-9.165v-41.84c0.002-5.105 2.023-9.264 4.516-9.299z"
+                  />
+                  <path
+                    id="rect11201"
+                    d="m123.12 64.992l50.483-0.705c2.493-0.035 4.514 4.069 4.514 9.165v41.84c0 5.097-2.021 9.256-4.514 9.292l-50.484 0.705c-2.493 0.034-4.514-4.069-4.514-9.165v-41.84c0-5.094 2.02-9.253 4.51-9.288z"
+                  />
+                  <path
+                    id="rect11203"
+                    d="m194.12 64.991l50.484-0.706c2.492-0.035 4.514 4.069 4.514 9.166v41.839c0 5.097-2.021 9.256-4.514 9.292l-50.484 0.705c-2.493 0.035-4.514-4.069-4.515-9.165l0.001-41.839c0.01-5.095 2.03-9.255 4.52-9.29z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <div class="footer__social-icon">
+        <a href="https://www.linkedin.com/in/ezequiel-fabbroni-b59536120" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ezequieljfabbroni@gmail.com"> <i class="fas fa-envelope"></i></a>
+        <i class="fa fa-chevron-up footer__social-up-icon" onclick="scollUp()"></i>
+      </div>
+    </footer>
+
+    <div class="interactive-background" id="interactive-background"></div>
+    <div id="keyboard-modal" class="keyboard-modal">
+      <div class="keyboard-modal__content">
+        <div class="keyboard-modal__close">
+          <i id="keyboard-modal-close" class="fas fa-times-circle"></i>
+        </div>
+
+        <div class="keyboard-modal__content-title">
+          <h2>Keyboards</h2>
+        </div>
+
+        <div class="keyboard-modal__body">
+          <table class="keyboard-modal__rotation-table">
+            <tr>
+              <th>Keyboard</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-arrow-left"></i>
+              </td>
+              <td>Move cube left</td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-arrow-up"></i>
+              </td>
+              <td>Move cube up</td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-arrow-left"></i>
+              </td>
+              <td>Move cube left</td>
+            </tr>
+            <tr>
+              <td>q</td>
+              <td>Mix the cube</td>
+            </tr>
+            <tr>
+              <td>t</td>
+              <td>show / hide the timer</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>start / stop animation</td>
+            </tr>
+            <tr>
+              <td>w</td>
+              <td>Resolve the cube</td>
+            </tr>
+            <tr>
+              <td>u</td>
+              <td>Rotate the upper face (white)</td>
+            </tr>
+            <tr>
+              <td>shitf + u</td>
+              <td>Rotate the upper face inverse (white)</td>
+            </tr>
+            <tr>
+              <td>d</td>
+              <td>Rotate the down face (yellow)</td>
+            </tr>
+            <tr>
+              <td>shitf + d</td>
+              <td>Rotate the down face inverse (yellow)</td>
+            </tr>
+            <tr>
+              <td>l</td>
+              <td>Rotate the left face (green)</td>
+            </tr>
+            <tr>
+              <td>shitf + l</td>
+              <td>Rotate the left face inverse (green)</td>
+            </tr>
+            <tr>
+              <td>r</td>
+              <td>Rotate the right face (blue)</td>
+            </tr>
+            <tr>
+              <td>shitf + r</td>
+              <td>Rotate the right face inverse (blue)</td>
+            </tr>
+            <tr>
+              <td>f</td>
+              <td>Rotate the front face (red)</td>
+            </tr>
+            <tr>
+              <td>shitf + f</td>
+              <td>Rotate the front face inverse (red)</td>
+            </tr>
+            <tr>
+              <td>b</td>
+              <td>Rotate the back face (orange)</td>
+            </tr>
+            <tr>
+              <td>shitf + b</td>
+              <td>Rotate the back face inverse (orange)</td>
+            </tr>
+
+            <tr>
+              <td>m, e, s</td>
+              <td>Rotate middles</td>
+            </tr>
+
+            <tr>
+              <td>shift + m, e, s</td>
+              <td>Rotate middles inverse</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="./scripts/detectMobile.js"></script>
+  <script src="./scripts/globals.js"></script>
+  <script src="./scripts/utils/index.js"></script>
+  <script src="./scripts/buildCube.js"></script>
+  <script src="./scripts/updateCube.js"></script>
+  <script src="./scripts/rotateCube.js"></script>
+  <script src="./scripts/coolAnimations.js"></script>
+  <script src="./scripts/moves.js"></script>
+  <script src="./scripts/mouseMovementsDefinitions.js"></script>
+  <script src="./scripts/handleMovements/shared.js"></script>
+  <script src="./scripts/handleMovements/index.js"></script>
+  <script src="./scripts/keyBindings.js"></script>
+  <script src="./scripts/mixCube.js"></script>
+  <script src="./scripts/entranceAnimations.js"></script>
+  <script src="./scripts/loadCubesImagesLazy.js"></script>
+  <script src="./scripts/timer.js"></script>
+  <script src="./scripts/openKeyboardModal.js"></script>
+</html>

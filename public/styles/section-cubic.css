@@ -1,0 +1,60 @@
+.section-cubic {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(41 38 47 / 20%);
+  background: radial-gradient(circle, rgba(16, 116, 16, 1) 40%, rgba(8, 0, 0, 1) 70%, rgba(21, 22, 21, 1) 80%, rgba(4, 20, 0, 1) 100%);
+  background-size: 100%;
+}
+
+.section-cubic__selected-area {
+  width: 100%;
+  perspective: 2000px;
+  backdrop-filter: blur(7px) brightness(100%) grayscale(0.7);
+}
+
+.section-cubic__main {
+  width: 100%;
+  height: calc(100vh - (74px + 64px)); /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh)* 100) - (74px + 64px));
+  transform: rotateX(-22deg) rotateY(60deg);
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-cubic__cubic {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 235px;
+  height: 235px;
+}
+
+.section-cubic__cubic-plain {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 225px;
+  height: 225px;
+}
+
+@media (min-width: 780px) {
+  .section-cubic {
+    background: radial-gradient(circle, rgba(16, 116, 16, 1) 15%, rgba(8, 0, 0, 1) 50%, rgba(21, 22, 21, 1) 73%, rgba(4, 20, 0, 1) 100%);
+  }
+  .section-cubic__cubic {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 305px;
+    height: 305px;
+  }
+
+  .section-cubic__cubic-plain {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 295px;
+    height: 295px;
+  }
+  .section-cubic__main {
+    height: calc(90vh);
+  }
+}

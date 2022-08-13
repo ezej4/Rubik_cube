@@ -1,0 +1,147 @@
+@keyframes rotate360 {
+  from {
+    transform: rotatez(-43deg);
+  }
+  to {
+    transform: rotatez(317deg);
+  }
+}
+
+@keyframes skewXTimerLogo {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#timer_arrow {
+  transform-origin: 255px 280px;
+  transform: rotateZ(-43deg);
+  transition: 0.1 ease all;
+}
+.timer_arrow--animated {
+  animation: rotate360 60s linear infinite;
+}
+.timer__logo--animated {
+  animation: skewXTimerLogo 10s ease infinite;
+}
+
+.timer {
+  position: absolute;
+  top: 12vh;
+  left: 4px;
+  padding: 4px 8px;
+  background: var(--secondary-color);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0;
+  transition: 1s ease all;
+}
+
+.timer--show {
+  opacity: 1;
+}
+
+.timer__logo {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.timer__fields {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer__moves,
+.timer__time {
+  display: block;
+  padding: 4px;
+}
+.timer__title {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer__moves .timer__value,
+.timer__time .timer__value {
+  padding: 4px;
+  border-radius: 4px;
+  background: black;
+  height: 15px;
+  width: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.timer__buttons {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer__buttons i {
+  padding: 8px;
+}
+
+@media (min-width: 780px) {
+  .timer {
+    position: absolute;
+    flex-direction: column;
+    top: 15vh;
+    left: 40px;
+    padding: 14px 18px;
+    border-radius: 30px;
+    font-size: 15px;
+  }
+
+  .timer__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timer__moves .timer__value,
+  .timer__time .timer__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    height: 20px;
+    width: 40px;
+    margin: 0;
+    margin-top: 4px;
+  }
+
+  .timer__buttons {
+    padding: 4px 0;
+  }
+  .timer__buttons i {
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+  }
+
+  .timer__buttons i:hover {
+    transform: translateY(-5px);
+    color: var(--cta-color);
+  }
+}

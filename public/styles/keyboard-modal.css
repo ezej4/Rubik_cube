@@ -1,0 +1,166 @@
+.keyboard-modal.show {
+  animation: entrance-left 0.6s ease forwards;
+}
+
+.keyboard-modal.hide {
+  animation: exit-left 0.6s ease forwards;
+}
+
+.keyboard-modal {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  z-index: 10;
+}
+
+.keyboard-modal__content {
+  width: 90%;
+  margin: 40px auto;
+  max-height: 800px;
+  padding-bottom: 48px;
+  overflow: auto;
+  color: rgb(30, 31, 31);
+  background: rgba(1, 75, 23, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(0, 0, 0, 0.46);
+}
+
+.keyboard-modal__body {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 34px;
+  padding: 24px 0 48px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #e1e424;
+}
+
+.keyboard-modal__keyboards--first {
+  flex-direction: column;
+  align-items: center;
+}
+
+.keyboard-modal__close {
+  width: 100%;
+  position: relative;
+}
+
+.keyboard-modal__close i {
+  position: absolute;
+  font-size: 24px;
+  right: 24px;
+  top: 24px;
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.keyboard-modal__close i:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.keyboard-modal__content-title {
+  text-align: center;
+  padding-top: 12px;
+  color: white;
+}
+
+.keyboard-modal__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0 24px;
+  padding: 0 5%;
+}
+
+.keyboard-modal__title-divisor {
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.keyboard-modal__keyboards {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+.keyboard-modal__keyboards--second {
+  margin-top: 20px;
+}
+
+.keyboard-modal__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  margin: 6px;
+  background: #535555;
+  border-radius: 15px;
+}
+
+.keyboard-modal__key {
+  margin: 12px;
+}
+
+.keyboard-modal__key-value {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+  background: rgb(224 224 224 / 50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .keyboard-modal__grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 12%;
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .keyboard-modal__grid {
+    padding: 0 18%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .keyboard-modal__keyboards--first {
+    flex-direction: row;
+  }
+
+  .keyboard-modal__rotation-table {
+    margin: 0 auto;
+    width: 80%;
+    padding: 24px;
+  }
+  .keyboard-modal__rotation-table td {
+    text-align: center;
+  }
+
+  .keyboard-modal__rotation-table th {
+    padding: 12px;
+  }
+
+  .keyboard-modal__rotation-table tr:nth-child(even) {
+    background-color: #2e2e2e;
+  }
+
+  .keyboard-modal__rotation-table td {
+    padding: 12px;
+  }
+
+  .keyboard-modal__rotation-table tr,
+  .keyboard-modal__rotation-table td {
+    border: 2px solid black;
+  }
+}
